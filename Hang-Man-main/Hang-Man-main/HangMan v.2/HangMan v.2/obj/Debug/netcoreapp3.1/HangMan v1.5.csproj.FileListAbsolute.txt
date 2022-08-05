@@ -1,0 +1,18 @@
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\HangMan v1.5.exe
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\HangMan v1.5.deps.json
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\HangMan v1.5.runtimeconfig.json
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\HangMan v1.5.runtimeconfig.dev.json
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\HangMan v1.5.dll
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\bin\Debug\netcoreapp3.1\HangMan v1.5.pdb
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan v1.5.csproj.AssemblyReference.cache
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan.HangMan.resources
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan_v1.5.Properties.Resources.resources
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan v1.5.csproj.GenerateResource.cache
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan v1.5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan v1.5.AssemblyInfoInputs.cache
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan v1.5.AssemblyInfo.cs
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan v1.5.csproj.CoreCompileInputs.cache
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan v1.5.dll
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan v1.5.pdb
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\HangMan v1.5.genruntimeconfig.cache
+C:\Users\peter\source\repos\WinFormsApp2\WinFormsApp2\obj\Debug\netcoreapp3.1\WinFormsApp2.HangMan.resources
