@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +13,9 @@ namespace HangMan
     public partial class HangMan : Form
     {
 
-        int fail_count = 0,answer;
+        int fail_count = 0,answer,check;
         
-        bool valid = true,lockEntr = false;
+        bool lockEntr = false;
         
         Random random = new Random();
         
@@ -31,7 +31,7 @@ namespace HangMan
             this.KeyPreview = true;
         }
         /// <summary>
-        /// populates resource folder with game images.
+        /// fills resource list with game images.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -44,36 +44,10 @@ namespace HangMan
             {
                 var resourceName = resourcesToLoad[i];
              
-                try
-                {
-                    if (Properties.Resources.ResourceManager.GetObject(resourceName) == null)
-                    {
-                        throw new Exception();
-                        
-                    }
-                   
-                    resources.Add(Properties.Resources.ResourceManager.GetObject(resourceName));
-                   
-                }
-                catch(Exception) 
-                {
-                  
-                  //  MessageBox.Show($"Failed to load {resourceName} at index {i}");
-
-                    Bitmap img = new Bitmap(240, 194);
-                    
-                    img.SetPixel(0,0,Color.Red);
-
-                    for (int x =0;x<240; x++)
-                    {
-                        for (int y=0;y<194;y++)
-                        {
-                            img.SetPixel(x, y, Color.Red);
-                        }
-                    }
-                    img.GetType();
-                    resources.Add(img);
-                }
+               
+               resources.Add(Properties.Resources.ResourceManager.GetObject(resourceName));
+              
+               
             }
            
          
@@ -94,29 +68,19 @@ namespace HangMan
         private void check_btn_Click(object sender, EventArgs e)
         {
 
-            valid = true;
-            
-            if (fail_count == 5)
-            {
-                check_btn.Enabled = false;
-
-            }
-
             if (userinput != null || userinput != "")
             {
-                int check;
+                
+                
                 if ( (!int.TryParse(userinput, out check))  ||  ((check > 100 || check < 0))  )
                 {
                     MessageBox.Show("Invalid Input");
-                    resetGame();
+                    userInput.Text = " ";
+                    
                 }
-
-
-
-
-                if (valid == true)
+                else 
                 {
-                    int userInt = int.Parse(userinput);
+                   int userInt = int.Parse(userinput);
                     
                     statusDisplay.Visible = true;
                    
@@ -126,8 +90,6 @@ namespace HangMan
 
                         statusDisplay.Image = resources.ElementAt(6) as Image;
 
-                        prepNewGame();
-                     
                     }
                     else
                     {
@@ -146,11 +108,18 @@ namespace HangMan
                            
                             statusDisplay.Image = resources.ElementAt(5) as Image;
 
-                            prepNewGame();
+                            check_btn.Enabled = false;
+
+                            newGamebox.Visible = true;
+
                         }
 
 
                     }
+
+                
+                
+                
                 }
 
 
@@ -184,24 +153,17 @@ namespace HangMan
 
         }
 
-        void prepNewGame ()
-        {
-            
-            newGamebox.Visible = !newGamebox.Visible;
-            lockEntr = true;
-        }
+       
         void resetGame()
         {
+            newGamebox.Visible = false;
             check_btn.Enabled = true;
             newgameBox_yes.Checked = false;
-            valid = false;
             userInput.Text = "";
             statusDisplay.Visible = false;
             prompt_box.Text = "Guess a number between 1 - 100";
             fail_count = 0;
-            newGamebox.Hide();
             lockEntr = false;
-           
             answer = random.Next(1, 100);
         }
 
@@ -219,6 +181,7 @@ namespace HangMan
 
         private void newgameBox_yes_CheckedChanged(object sender, EventArgs e)
         {
+           
             resetGame();
         
         }
